@@ -2,14 +2,14 @@
   --blue: #1e90ff;
   --dark: #0b0f14;
   --light: #ffffff;
-  --gray: #111827;
+  --gray: #1a1f2b;
 }
 
 /* RESET */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: var(--dark);
+  background: var(--dark);
   color: var(--light);
 }
 
@@ -18,94 +18,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 60px;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-/* LOGO */
-.nav-logo {
-  width: 120px;
-}
-
-/* LINKS */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-/* BUTTON */
-.theme-btn {
-  padding: 8px 16px;
-  background: var(--blue);
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-/* HERO */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 120px 100px;
-}
-
-.hero-text {
-  max-width: 500px;
-}
-
-.hero-logo {
-  width: 320px;
-}
-
-/* TEXT */
-.hero-text {
-  max-width: 500px;
-}
-
-.hero-text h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
-}
-
-.hero-text p {
-  color: #aaa;
-  font-size: 18px;
-}
-
-/* BUTTON CTA */
-.cta {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 14px 28px;
-  background-color: var(--blue);
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-/* IMAGE */
-.hero-logo {
-  width: 350px;
-}
-
-/* LIGHT MODE */
-.light-mode {
-  background-color: white;
-  color: black;
-}
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 60px;
+  padding: 20px 80px;
 }
 
 .nav-logo {
@@ -118,6 +31,67 @@ body {
   list-style: none;
 }
 
-.theme-btn {
-  margin-left: 20px;
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 80px;
+}
+
+/* LEFT */
+.hero-text {
+  max-width: 520px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  margin-top: 15px;
+  color: #aaa;
+  font-size: 18px;
+}
+
+/* BUTTON */
+.cta {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 14px 30px;
+  background: var(--blue);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* RIGHT IMAGE */
+.hero-logo {
+  width: 360px;
+}
+
+/* SECTION BELOW */
+.section {
+  padding: 80px;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background: var(--gray);
+  padding: 30px;
+  border-radius: 10px;
+  flex: 1;
 }
