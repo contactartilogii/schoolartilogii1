@@ -54,7 +54,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 100px 80px;
+  padding: 120px 100px;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-logo {
+  width: 320px;
 }
 
 /* TEXT */
@@ -92,4 +100,24 @@ body {
 .light-mode {
   background-color: white;
   color: black;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+}
+
+.nav-logo {
+  width: 110px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.theme-btn {
+  margin-left: 20px;
 }
