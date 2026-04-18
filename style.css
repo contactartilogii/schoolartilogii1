@@ -94,4 +94,18 @@ body {
   padding: 30px;
   border-radius: 10px;
   flex: 1;
+} .card {
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.cta {
+  transition: opacity 0.2s ease;
+}
+
+.cta:hover {
+  opacity: 0.8;
 }
