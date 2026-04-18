@@ -4,7 +4,6 @@ body {
   background-color: var(--dark);
   color: var(--light);
 }
-
 :root {
   --blue: #1e90ff;
   --dark: #0b0f14;
@@ -17,21 +16,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  background-color: transparent;
-  position: sticky;
-  top: 0;
-}
-
-.navbar ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
+  padding: 20px 60px;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .navbar a {
-  color: var(--light);
+  color: white;
   text-decoration: none;
+  font-weight: 500;
 }
 
 /* HERO */
@@ -39,26 +31,32 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 80px;
+  padding: 120px 80px;
 }
 
-.hero-text {
-  max-width: 500px;
+.hero-text h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
 }
 
-.cta {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background-color: var(--blue);
-  color: white;
-  text-decoration: none;
+.hero-text p {
+  color: #ccc;
+  font-size: 18px;
 }
 
 .hero-logo {
-  width: 300px;
+  width: 350px;
 }
 .light-mode {
   background-color: white;
   color: black;
+}
+.cta {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 28px;
+  background-color: var(--blue);
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
 }
