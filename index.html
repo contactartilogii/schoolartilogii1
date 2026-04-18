@@ -1,48 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Artilogii</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <nav class="navbar">
-    <img src="logo1.jpg" class="nav-logo">
+<!-- NAVBAR -->
+<nav class="navbar">
+  <img src="logo1.jpg" class="nav-logo">
 
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 
-    <button class="theme-btn" onclick="toggleTheme()">Theme</button>
-  </nav>
-  <section class="hero">
-    <div class="hero-text">
-      <h1>We build systems that grow your business.</h1>
-      <p>AI automation & digital strategy designed for real results.</p>
-      <a href="services.html" class="cta">View Services</a>
-    </div> <section class="section">
+  <button onclick="toggleTheme()">Theme</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero reveal">
+  <div class="hero-text">
+    <h1>We build systems that grow your business.</h1>
+    <p>AI automation & digital strategy designed for real results.</p>
+    <a href="services.html" class="cta">View Services</a>
+  </div>
+
+  <img src="logo2.jpg" class="hero-logo">
+</section>
+
+<!-- SECTION 1 -->
+<section class="section reveal">
   <h2>What We Do</h2>
 
   <div class="cards">
     <div class="card">
       <h3>AI Automation</h3>
-      <p>We build systems that automate your business operations.</p>
+      <p>We streamline your operations with smart systems.</p>
     </div>
 
     <div class="card">
       <h3>SMMA</h3>
-      <p>We help you scale your online presence and acquire clients.</p>
+      <p>We help you attract and convert more clients.</p>
     </div>
   </div>
 </section>
 
-<img src="logo2.jpg" class="hero-logo">
-  </section>
+<!-- SECTION 2 -->
+<section class="section reveal">
+  <h2>Why Artilogii</h2>
+  <p class="center">
+    We focus on results, not noise. Clean systems, real growth.
+  </p>
+</section>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
