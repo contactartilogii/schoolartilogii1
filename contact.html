@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Artilogii</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <nav class="navbar container">
+    <img src="logo1.jpg" class="nav-logo">
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <button class="theme-btn" onclick="toggleTheme()">Theme</button>
+  </nav>
+</header>
+
+<main>
+
+<section class="section container reveal">
+  <h1>Contact</h1>
+  <p>Tell us about your business.</p>
+</section>
+
+<section class="section container reveal">
+
+  <form onsubmit="handleSubmit(event)" class="contact-form">
+
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+
+    <button type="submit" class="cta">Send Message</button>
+
+  </form>
+
+</section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
