@@ -3,86 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <title>Artilogii</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar">
-  <img src="logo1.jpg" class="nav-logo">
+<header class="header">
+  <nav class="navbar container">
+    <img src="logo1.jpg" class="nav-logo">
 
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul> 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"> 
-  <button onclick="toggleTheme()">Theme</button>
-</nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <button class="theme-btn" onclick="toggleTheme()">Theme</button>
+  </nav>
+</header>
 
 <!-- HERO -->
-<section class="hero reveal">
+<main>
+
+<section class="hero container reveal">
   <div class="hero-text">
     <h1>We build systems that grow your business.</h1>
     <p>AI automation & digital strategy designed for real results.</p>
     <a href="services.html" class="cta">View Services</a>
   </div>
 
-  <img src="logo2.jpg" class="hero-logo">
+  <div class="hero-visual">
+    <img src="logo2.jpg" class="hero-logo">
+  </div>
 </section>
-<section class="section reveal">
+
+<!-- HOW IT WORKS -->
+<section class="section container reveal">
   <h2>How It Works</h2>
 
   <div class="steps">
     <div class="step">
       <span>01</span>
       <h3>Audit</h3>
-      <p>We analyze your business and identify growth opportunities.</p>
+      <p>We analyze your business and identify opportunities.</p>
     </div>
 
     <div class="step">
       <span>02</span>
       <h3>Build</h3>
-      <p>We create automation systems tailored to your needs.</p>
+      <p>We create automation systems tailored to you.</p>
     </div>
 
     <div class="step">
       <span>03</span>
       <h3>Scale</h3>
-      <p>We optimize and scale your operations for growth.</p>
+      <p>We optimize and grow your operations.</p>
     </div>
   </div>
 </section>
-<!-- SECTION 1 -->
-<section class="section reveal">
+
+<!-- SERVICES PREVIEW -->
+<section class="section container reveal">
   <h2>What We Do</h2>
 
   <div class="cards">
     <div class="card">
       <h3>AI Automation</h3>
-      <p>We streamline your operations with smart systems.</p>
+      <p>Systems that save time and increase efficiency.</p>
     </div>
 
     <div class="card">
       <h3>SMMA</h3>
-      <p>We help you attract and convert more clients.</p>
+      <p>Strategies that bring in more clients consistently.</p>
     </div>
   </div>
 </section>
 
-<!-- SECTION 2 -->
-<section class="section reveal">
-  <h2>Why Artilogii</h2>
-  <p class="center">
-    We focus on results, not noise. Clean systems, real growth.
-  </p>
+<!-- CTA -->
+<section class="cta-section container reveal">
+  <h2>Ready to grow your business?</h2>
+  <a href="contact.html" class="cta">Get Started</a>
 </section>
+
+</main>
 
 <script src="script.js"></script>
 </body>
 </html>
-<section class="section reveal center">
-  <h2>Ready to grow your business?</h2>
-  <a href="contact.html" class="cta">Get Started</a>
-</section>
