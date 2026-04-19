@@ -336,3 +336,10 @@ body {
 .contact-form textarea {
   min-height: 120px;
 }
+
+.footer {
+  text-align: center;
+  padding: 40px;
+  border-top: 1px solid var(--border);
+  margin-top: 100px;
+}
