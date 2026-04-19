@@ -38,6 +38,18 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
+} 
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+
+  background-image: radial-gradient(
+    circle at 20% 20%,
+    rgba(30,144,255,0.05),
+    transparent 40%
+  );
 }
 
 /* =========================
@@ -149,7 +161,21 @@ body {
   color: var(--text-secondary);
   font-size: 18px;
 }
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(30,144,255,0.15), transparent 70%);
+  top: -100px;
+  right: -100px;
+  z-index: 0;
+}
 
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
 /* CTA */
 .cta {
   display: inline-block;
@@ -195,25 +221,41 @@ body {
 
 .dashboard {
   margin-top: 40px;
-  padding: 20px;
+  padding: 25px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
 }
 
+/* rows */
 .dash-row {
-  height: 20px;
+  height: 14px;
+  background: rgba(255,255,255,0.08);
+  margin: 12px 0;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* animated fill */
+.dash-row::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 60%;
   background: var(--blue);
-  margin: 10px 0;
   border-radius: 4px;
 }
 
-.dash-row.short {
-  width: 70%;
+/* variations */
+.dash-row.short::after {
+  width: 40%;
 }
 
-.dash-row.shorter {
-  width: 50%;
+.dash-row.shorter::after {
+  width: 25%;
 }
 /* =========================
    STEPS
@@ -310,7 +352,7 @@ body {
   border-top: 1px solid var(--border);
 }
 .section:nth-child(even) {
-  background: rgba(255,255,255,0.02);
+  background: rgba(255,255,255,0.015);
 }
 
 .light-mode .section:nth-child(even) {
