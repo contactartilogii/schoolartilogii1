@@ -1,9 +1,7 @@
-// THEME
 function toggleTheme() {
   document.body.classList.toggle("light-mode");
 }
 
-// SCROLL REVEAL
 function revealOnScroll() {
   const reveals = document.querySelectorAll(".reveal");
 
@@ -11,10 +9,13 @@ function revealOnScroll() {
     const windowHeight = window.innerHeight;
     const elementTop = el.getBoundingClientRect().top;
 
-    if (elementTop < windowHeight - 100) {
+    if (elementTop < windowHeight - 80) {
       el.classList.add("active");
     }
   });
 }
 
 window.addEventListener("scroll", revealOnScroll);
+
+// trigger on load too
+revealOnScroll();
