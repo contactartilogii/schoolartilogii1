@@ -173,6 +173,48 @@ body {
   transition: transform 0.1s linear;
 }
 
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(30,144,255,0.15), transparent 70%);
+  top: -100px;
+  right: -100px;
+  z-index: 0;
+}
+
+.hero-text, .hero-visual {
+  position: relative;
+  z-index: 1;
+}
+
+.dashboard {
+  margin-top: 40px;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.dash-row {
+  height: 20px;
+  background: var(--blue);
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+.dash-row.short {
+  width: 70%;
+}
+
+.dash-row.shorter {
+  width: 50%;
+}
 /* =========================
    STEPS
 ========================= */
