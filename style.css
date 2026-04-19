@@ -233,3 +233,44 @@ body {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+.split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.split-text {
+  max-width: 500px;
+}
+
+.split-visual {
+  width: 350px;
+  height: 220px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.reverse {
+  flex-direction: row-reverse;
+}
+.big-section {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: -1px;
+
+  border-top: 1px solid var(--border);
+}
+.section:nth-child(even) {
+  background: rgba(255,255,255,0.02);
+}
+
+.light-mode .section:nth-child(even) {
+  background: rgba(0,0,0,0.02);
+}
