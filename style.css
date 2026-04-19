@@ -144,7 +144,7 @@ body {
 /* HERO IMAGE */
 .hero-logo {
   width: 320px;
-  animation: float 6s ease-in-out infinite;
+  transition: transform 0.1s linear;
 }
 
 /* floating animation */
