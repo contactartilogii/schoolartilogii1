@@ -1,5 +1,5 @@
 /* =========================
-   VARIABLES (DESIGN SYSTEM)
+   DESIGN SYSTEM
 ========================= */
 :root {
   --blue: #1e90ff;
@@ -14,7 +14,7 @@
   --radius: 10px;
 }
 
-/* LIGHT MODE (ONLY VARIABLES CHANGE) */
+/* LIGHT MODE */
 .light-mode {
   --bg: #ffffff;
   --text: #000000;
@@ -33,18 +33,16 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-} 
+/* =========================
+   GLOBAL
+========================= */
 body {
   font-family: 'Inter', sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
 
+  /* subtle background */
   background-image: radial-gradient(
     circle at 20% 20%,
     rgba(30,144,255,0.05),
@@ -52,9 +50,6 @@ body {
   );
 }
 
-/* =========================
-   LAYOUT SYSTEM
-========================= */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -62,8 +57,16 @@ body {
 }
 
 .section {
-  padding: 160px 0;
+  padding: 140px 0;
   border-top: 1px solid var(--border);
+}
+
+.section:nth-child(even) {
+  background: rgba(255,255,255,0.015);
+}
+
+.light-mode .section:nth-child(even) {
+  background: rgba(0,0,0,0.02);
 }
 
 /* =========================
@@ -77,13 +80,10 @@ body {
   backdrop-filter: blur(10px);
   background: rgba(11, 15, 20, 0.7);
   border-bottom: 1px solid var(--border);
-
-  transition: background 0.3s ease;
 }
 
-/* Light mode navbar fix */
 .light-mode .header {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255,255,255,0.9);
 }
 
 .navbar {
@@ -95,7 +95,6 @@ body {
 
 .nav-logo {
   height: 36px;
-  width: auto;
 }
 
 .nav-links {
@@ -111,7 +110,6 @@ body {
   position: relative;
 }
 
-/* underline hover */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -132,8 +130,8 @@ body {
   background: var(--blue);
   border: none;
   color: white;
-  cursor: pointer;
   border-radius: 6px;
+  cursor: pointer;
 }
 
 /* =========================
@@ -144,6 +142,24 @@ body {
   align-items: center;
   justify-content: space-between;
   min-height: 85vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(30,144,255,0.15), transparent 70%);
+  top: -100px;
+  right: -100px;
+  z-index: 0;
+}
+
+.hero-text,
+.hero-visual {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-text {
@@ -161,22 +177,14 @@ body {
   color: var(--text-secondary);
   font-size: 18px;
 }
-.hero::before {
-  content: "";
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(30,144,255,0.15), transparent 70%);
-  top: -100px;
-  right: -100px;
-  z-index: 0;
+
+.hero-logo {
+  width: 320px;
 }
 
-.hero > * {
-  position: relative;
-  z-index: 1;
-}
-/* CTA */
+/* =========================
+   CTA
+========================= */
 .cta {
   display: inline-block;
   margin-top: 30px;
@@ -185,78 +193,58 @@ body {
   color: white;
   text-decoration: none;
   border-radius: 6px;
-  transition: all 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .cta:hover {
   transform: translateY(-2px);
-  opacity: 0.9;
 }
 
-/* HERO IMAGE */
-.hero-logo {
+/* =========================
+   SPLIT LAYOUT
+========================= */
+.split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.split-text {
+  max-width: 500px;
+}
+
+.visual-img {
   width: 320px;
-  transition: transform 0.1s linear;
-}
-
-.hero {
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-bg {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(30,144,255,0.15), transparent 70%);
-  top: -100px;
-  right: -100px;
-  z-index: 0;
-}
-
-.hero-text, .hero-visual {
-  position: relative;
-  z-index: 1;
-}
-
-.dashboard {
-  margin-top: 40px;
-  padding: 25px;
-  background: var(--surface);
-  border: 1px solid var(--border);
   border-radius: var(--radius);
+  border: 1px solid var(--border);
 }
 
-/* rows */
-.dash-row {
-  height: 14px;
-  background: rgba(255,255,255,0.08);
-  margin: 12px 0;
-  border-radius: 4px;
-  position: relative;
-  overflow: hidden;
+/* =========================
+   CARDS
+========================= */
+.cards {
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
 }
 
-/* animated fill */
-.dash-row::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 60%;
-  background: var(--blue);
-  border-radius: 4px;
+.card {
+  background: var(--surface);
+  padding: 30px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: 0.3s ease;
 }
 
-/* variations */
-.dash-row.short::after {
-  width: 40%;
+.card:hover {
+  transform: translateY(-6px);
 }
 
-.dash-row.shorter::after {
-  width: 25%;
-}
 /* =========================
    STEPS
 ========================= */
@@ -276,91 +264,45 @@ body {
 }
 
 /* =========================
-   CARDS
+   DASHBOARD
 ========================= */
-.cards {
-  display: flex;
-  gap: 30px;
-  margin-top: 50px;
-}
-
-.card {
-  background: var(--surface);
-  padding: 30px;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  transition: all 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-}
-
-/* =========================
-   CTA SECTION
-========================= */
-.cta-section {
-  text-align: center;
-  padding: 160px 0;
-}
-
-/* =========================
-   SCROLL REVEAL
-========================= */
-.reveal {
-  opacity: 0;
-  transform: translateY(60px) scale(0.98);
-  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-.split {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 60px;
-}
-
-.split-text {
-  max-width: 500px;
-}
-
-.split-visual {
-  width: 350px;
-  height: 220px;
+.dashboard {
+  margin-top: 40px;
+  padding: 25px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
 }
-.reverse {
-  flex-direction: row-reverse;
-}
-.big-section {
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 
-  font-size: 48px;
-  font-weight: 500;
-  letter-spacing: -1px;
-
-  border-top: 1px solid var(--border);
-}
-.section:nth-child(even) {
-  background: rgba(255,255,255,0.015);
+.dash-row {
+  height: 14px;
+  background: rgba(255,255,255,0.08);
+  margin: 12px 0;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
 }
 
-.light-mode .section:nth-child(even) {
-  background: rgba(0,0,0,0.02);
+.dash-row::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 60%;
+  background: var(--blue);
 }
 
-/* LOGOS */
-.logos {
+.dash-row.short::after {
+  width: 40%;
+}
+
+.dash-row.shorter::after {
+  width: 25%;
+}
+
+/* =========================
+   LOGOS
+========================= */
+.logo-grid {
   display: flex;
   gap: 30px;
   margin-top: 40px;
@@ -375,7 +317,9 @@ body {
   border-radius: var(--radius);
 }
 
-/* CASE STUDY */
+/* =========================
+   CASE
+========================= */
 .case {
   margin-top: 40px;
   max-width: 600px;
@@ -386,26 +330,14 @@ body {
   padding-left: 20px;
 }
 
-/* VISUAL SYSTEM */
-.split-visual {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.visual-box {
-  padding: 15px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  text-align: center;
-}
-
+/* =========================
+   CONTACT
+========================= */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 500px;
+  max-width: 400px;
 }
 
 .contact-form input,
@@ -421,9 +353,46 @@ body {
   min-height: 120px;
 }
 
+/* =========================
+   CTA SECTION
+========================= */
+.cta-section {
+  text-align: center;
+  padding: 140px 0;
+}
+
+/* =========================
+   BIG SECTION
+========================= */
+.big-section {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  border-top: 1px solid var(--border);
+}
+
+/* =========================
+   FOOTER
+========================= */
 .footer {
   text-align: center;
   padding: 40px;
   border-top: 1px solid var(--border);
   margin-top: 100px;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
